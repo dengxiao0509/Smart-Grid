@@ -1,7 +1,10 @@
 package INF380;
 
+import java.util.List;
+
 public class Home {
 	
+	//
 	private int p; //production
 	private int c; //consommation totale
 	private int cc; //consommation critique
@@ -11,11 +14,14 @@ public class Home {
 	private int apo; //appropriation optionlle
 	
 	
-	private double v;//vatio p/c
-	
+	private double v; //ratio p/c
 	private double sati;//satisfaction
+	private List<Double> stf_list;  // list of satisfactions
+	private double sati_l;// long term satisfaction
+	
 	
 	public Home(){	
+		
 	}
 	
 	public void setP(int p) {
@@ -50,8 +56,12 @@ public class Home {
 		v = p/c;
 	} 
 	
-	public void setSATI() {
-		
+	public void setSATI(double stf) {
+		this.sati = stf;
+	}
+	
+	public void setSATI_l(double stf) {
+		this.sati_l = stf;
 	}
 	
 	public double getSati() {
@@ -74,9 +84,25 @@ public class Home {
 		return co;
 	} 
 	
+	public int getAP() {
+		return ap;
+	}
+	
+	public int getAPC() {
+		return apc;
+	}
+	
+	public int getAPO() {
+		return apo;
+	}
+	
 	public double getV() {
 		return v;
 	} 
+	
+	public List<Double> getStf_list(){
+		return stf_list;
+	}
 	
 
 }
