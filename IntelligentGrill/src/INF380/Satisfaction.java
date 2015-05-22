@@ -66,5 +66,8 @@ public void calcul_lt(Home home){
 	home.setSATI_l(stf_l);
 }
 
+public void calcul_s_m_l(){
+	
+}
 
 }
